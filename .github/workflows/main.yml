@@ -6,9 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - name: Run a one line script
+        run: Hello.bat
       - uses: ./action-a
         with: 
           MY_NAME: "Mona"
 
-      - name: Run a one line script
-        run: bat Hello.bat
+
